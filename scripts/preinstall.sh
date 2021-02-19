@@ -20,8 +20,8 @@ else
     . ./versions
 
     # unpack dependencies
-    tar xzf ./curl-$CURL_VERSION.tar.gz && \
-    tar xzf ./aws-lambda-cpp-$AWS_LAMBDA_CPP_RELEASE.tar.gz
+    tar --no-same-owner -xzf ./curl-$CURL_VERSION.tar.gz && \
+    tar --no-same-owner -xzf ./aws-lambda-cpp-$AWS_LAMBDA_CPP_RELEASE.tar.gz
 
     (
         # Build Curl
